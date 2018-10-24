@@ -1,11 +1,17 @@
 <?php
-$nama = $_POST['nama'];
-$alamat = $_POST['alamat'];
-// $jk = "";
-// if (isset($_POST['jk'])) $jk = $_POST['jk'];
+$idkarcis = $_POST['idkarcis'];
 $tgl = $_POST['tgl'];
 $bln = $_POST['bln'];
 $thn = $_POST['thn'];
+$nokursi = $_POST['nokursi'];
+$nokursi = $_POST['nokursi'];
+$kelas = $_POST['kelas'];
+$kelas = $_POST['kelas'];
+$tujuan = $_POST['tujuan'];
+$tujuan = $_POST['tujuan'];
+$waktu = $_POST['waktu'];
+$waktu = $_POST['waktu'];
+$jumlahtiket = $_POST['jumlahtiket'];
 ?>
 
 <!DOCTYPE html>

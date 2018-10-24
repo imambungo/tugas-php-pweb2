@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <form method="POST" action="kirim.php">
+    <form method="POST" action="output.php">
     <table>
         <tr>
             <td colspan="3" style="text-align: center">Form Pembelian Tiket Kereta Api</td>
@@ -108,69 +108,15 @@
             <td>Waktu Keberangkatan</td>
             <td>:</td>
             <td>
-                <input type="radio" name="waktukeberangkatan" value="Pagi">Pagi
-                <input type="radio" name="waktukeberangkatan" value="Siang">Siang
-                <input type="radio" name="waktukeberangkatan" value="Malam">Malam
+                <input type="radio" name="waktu" value="Pagi">Pagi
+                <input type="radio" name="waktu" value="Siang">Siang
+                <input type="radio" name="waktu" value="Malam">Malam
             </td>
         </tr>
-        
-
-
         <tr>
-            <td>Nama</td>
+            <td>Jumlah Tiket</td>
             <td>:</td>
-            <td><input type="text" name="nama" placeholder="Masukkan nama"></td>
-        </tr>
-        <tr>
-            <td valign="top">Alamat</td>
-            <td valign="top">:</td>
-            <td><textarea name="alamat" id="" cols="30" rows="5" placeholder="Masukkan alamat"></textarea></td>
-        </tr>
-        <tr>
-            <td>Jenis kelamin</td>
-            <td>:</td>
-            <td>
-                <input type="radio" name="jk" value="pria">pria
-                <input type="radio" name="jk" value="wanita">wanita
-            </td>
-        </tr>
-        <tr>
-            <td>Tanggal lahir</td>
-            <td>:</td>
-            <td>
-                <select name="tgl">
-                    <?php
-                    for ($i=1; $i <= 31; $i++) { 
-                        echo "<option value='$i'>$i</option>";
-                    }
-                    ?>
-                </select>
-                    -
-                <select name="bln">
-                    <?php
-                    for ($i=1; $i <= 12; $i++) { 
-                        echo "<option value='$i'>$i</option>";
-                    }
-                    ?>
-                </select>
-                -
-                <select name="thn">
-                    <?php
-                    for ($i=1980; $i < 2018; $i++) { 
-                        echo "<option value='$i'>$i</option>";
-                    }
-                    ?>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">Hobi</td>
-            <td valign="top">:</td>
-            <td>
-                <input type="checkbox" name="hobi[]" value="Ngoding">Ngoding<br>
-                <input type="checkbox" name="hobi[]" value="Main voli">Main voli<br>
-                <input type="checkbox" name="hobi[]" value="Berenang">Berenang<br>
-            </td>
+            <td><input type="text" name="jumlahtiket" placeholder="Masukkan jumlah tiket"></td>
         </tr>
 
         <!-- submit button -->
