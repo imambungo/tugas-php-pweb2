@@ -33,7 +33,7 @@ function tentukanHarga($kelas, $tujuan){
 
 $totalHarga = $jumlahtiket * $harga;
 
-$pajak = $totalharga/10;
+$pajak = $totalHarga/10;
 $totalBayar = $totalHarga + $pajak;
 
 ?>
@@ -62,62 +62,77 @@ $totalBayar = $totalHarga + $pajak;
     </style>
 </head>
 
-
-
-
-
-
-
-
-
-
-
 <body>
     <table>
         <tr>
             <td colspan="3">DATA PEMBELIAN KARCIS</td>
         </tr>
         <tr>
-            <td valign="top">Alamat</td>
-            <td valign="top">:</td>
-            <td><?echo $alamat ?></td>
-        </tr>
-        <tr>
-            <td>Jenis kelamin</td>
+            <td>ID Karcis</td>
             <td>:</td>
-            <td>
-                <?
-                if (isset($_POST['jk'])) {
-                    echo $_POST['jk'];
-                }
-                ?>
-
-                <!-- <?echo $jk; ?> -->
-            </td>
+            <td><?echo $idkarcis ?></td>
         </tr>
         <tr>
-            <td>Tanggal lahir</td>
+            <td>Tanggal Keberangkatan</td>
             <td>:</td>
             <td>
                 <?echo "$tgl-$bln-$thn"; ?>
             </td>
         </tr>
         <tr>
-            <td valign="top">Hobi</td>
-            <td valign="top">:</td>
+            <td>No Kursi</td>
+            <td>:</td>
             <td>
-            <?php
-            if (isset($_POST['submit'])) { //to run PHP script on submit
-                if (!empty($_POST['hobi'])) {
-                    // Loop to store and display values of individual checked checkbox.
-                    foreach ($_POST['hobi'] as $selected) {
-                        echo "- $selected</br>";
-                    }
-                } else {
-                    echo "Tidak ada";
-                }
-            }
-            ?>
+                <?echo $nokursi ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Kelas</td>
+            <td>:</td>
+            <td>
+                <?echo $kelas ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Tujuan</td>
+            <td>:</td>
+            <td>
+                <?echo $tujuan ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Waktu</td>
+            <td>:</td>
+            <td>
+                <?echo $waktu ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Jumlah Tiket</td>
+            <td>:</td>
+            <td>
+                <?echo $jumlahtiket ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Total Harga</td>
+            <td>:</td>
+            <td>
+                <?echo $totalHarga ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Pajak</td>
+            <td>:</td>
+            <td>
+                <?echo $pajak ?>
+            </td>
+        </tr>
+        <tr>
+            <td>Total Bayar</td>
+            <td>:</td>
+            <td>
+                <?echo $totalBayar ?>
             </td>
         </tr>
     </table>
