@@ -29,10 +29,10 @@ li {
 <?php
 
 function suatuFungsi($n) {
-    for ($i=1; $i <= $n; $i++) { 
+    for ($i=1; $i <= $n; $i++) {
         echo "<ul>";
         $k = $i;
-        for ($j=1; $j <= $i; $j++) { 
+        for ($j=1; $j <= $i; $j++) {
             echo "<li>$k</li>";
             $k += $n-$j;
         }
