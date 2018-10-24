@@ -8,10 +8,34 @@ $nokursi = $_POST['nokursi'];
 $kelas = $_POST['kelas'];
 $kelas = $_POST['kelas'];
 $tujuan = $_POST['tujuan'];
-$tujuan = $_POST['tujuan'];
-$waktu = $_POST['waktu'];
 $waktu = $_POST['waktu'];
 $jumlahtiket = $_POST['jumlahtiket'];
+
+$harga = tentukanHarga($kelas, $tujuan);
+
+function tentukanHarga($kelas, $tujuan){
+    $arrayTiket = [
+        [160000, 180000, 155000, 150000, 140000],
+        [125000, 135000, 130000, 125000, 110000],
+        [45000, 50000, 45000, 40000, 30000],
+    ];
+
+    if ($kelas == "Eksekutif") $i = 0;
+    if ($kelas == "Bisnis") $i = 1;
+    if ($kelas == "Ekonomi") $i = 2;
+    if ($tujuan == "Palembang") $j = 0;
+    if ($tujuan == "Lampung") $j = 1;
+    if ($tujuan == "Lubuk Linggau") $j = 2;
+    if ($tujuan == "Lahat") $j = 3;
+    if ($tujuan == "Prabumulih") $j = 4;
+    return $arrayTiket[$i][$j];
+}
+
+$totalHarga = $jumlahtiket * $harga;
+
+$pajak = $totalharga/10;
+$totalBayar = $totalHarga + $pajak;
+
 ?>
 
 <!DOCTYPE html>
@@ -37,10 +61,21 @@ $jumlahtiket = $_POST['jumlahtiket'];
         }
     </style>
 </head>
+
+
+
+
+
+
+
+
+
+
+
 <body>
     <table>
         <tr>
-            <td colspan="3">Selamat datang <?echo $nama; ?></td>
+            <td colspan="3">DATA PEMBELIAN KARCIS</td>
         </tr>
         <tr>
             <td valign="top">Alamat</td>

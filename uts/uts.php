@@ -14,6 +14,13 @@
         .buttonHolder {
             text-align: center;
         }
+        th {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .data {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -127,6 +134,78 @@
                     <input type="reset" value="Reset">
                 </div>
             </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <table>
+    <?php
+    $arrayTiket = [
+        [160000, 180000, 155000, 150000, 140000],
+        [125000, 135000, 130000, 125000, 110000],
+        [45000, 50000, 45000, 40000, 30000]
+    ];
+    ?>
+        <tr>
+            <th colspan="4">Harga Tiket</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Eksekutif</th>
+            <th>Bisnis</th>
+            <th>Ekonomi</th>
+        </tr>
+        <tr>
+            <th>Palembang</th>
+            <?php
+                for ($i = 0; $i < count($arrayTiket); $i++) {
+                    echo"<td class='data'>";
+                    echo $arrayTiket[$i][0];
+                    echo"</td>";
+                }
+            ?>
+        </tr>
+        <tr>
+            <th>Lampung</th>
+            <?php
+                for ($i = 0; $i < count($arrayTiket); $i++) {
+                    echo"<td class='data'>";
+                    echo $arrayTiket[$i][1];
+                    echo"</td>";
+                }
+            ?>
+        </tr>
+        <tr>
+            <th>Lubuk Linggau</th>
+            <?php
+                for ($i = 0; $i < count($arrayTiket); $i++) {
+                    echo"<td class='data'>";
+                    echo $arrayTiket[$i][2];
+                    echo"</td>";
+                }
+            ?>
+        </tr>
+        <tr>
+            <th>Lahat</th>
+            <?php
+                for ($i = 0; $i < count($arrayTiket); $i++) {
+                    echo"<td class='data'>";
+                    echo $arrayTiket[$i][3];
+                    echo"</td>";
+                }
+            ?>
+        </tr>
+        <tr>
+            <th>Prabumulih</th>
+            <?php
+                for ($i = 0; $i < count($arrayTiket); $i++) {
+                    echo"<td class='data'>";
+                    echo $arrayTiket[$i][4];
+                    echo"</td>";
+                }
+            ?>
         </tr>
     </table>
     </form>
