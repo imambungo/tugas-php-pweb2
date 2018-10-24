@@ -1,3 +1,5 @@
+<!-- M. Imam Pratama 09021281722063 -->
+
 <?php
 $idkarcis = $_POST['idkarcis'];
 $tgl = $_POST['tgl'];
@@ -52,7 +54,7 @@ $totalBayar = $totalHarga + $pajak;
             margin: auto;
             /* table-layout: fixed; */
         }
-        .buttonHolder {
+        .center {
             text-align: center;
         }
         td {
@@ -65,7 +67,7 @@ $totalBayar = $totalHarga + $pajak;
 <body>
     <table>
         <tr>
-            <td colspan="3">DATA PEMBELIAN KARCIS</td>
+            <td colspan="3" class="center">DATA PEMBELIAN KARCIS</td>
         </tr>
         <tr>
             <td>ID Karcis</td>
@@ -138,3 +140,5 @@ $totalBayar = $totalHarga + $pajak;
     </table>
 </body>
 </html>
+
+<!-- M. Imam Pratama 09021281722063 -->
